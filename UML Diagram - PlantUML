@@ -1,0 +1,36 @@
+PlantUML: A Text-Based Diagraming Tool
+PlantUML is a powerful and versatile open-source tool that allows you to create various types of diagrams using a simple text-based language. Instead of using complex graphical software, 
+you can define your diagrams using plain text, making it efficient and collaborative.   
+
+Key Features:
+Supports a wide range of diagram types: UML diagrams (sequence, class, use case, activity, component, deployment), architecture diagrams, flowcharts, mind maps, and more.   
+
+Easy-to-learn syntax: The text-based language is intuitive and straightforward.   
+
+Integration with various tools: PlantUML can be integrated into your favorite text editors, IDEs, and documentation tools.   
+
+Open-source: It's freely available and customizable.   
+
+How it Works:
+Write a text description: You define your diagram using PlantUML's syntax.   
+Generate an image: PlantUML processes the text and creates an image of the diagram.   
+Embed or export: You can embed the image in your documents, presentations, or share it independently.
+
+Ex - Sequence Diagram
+----------------------------------------
+Code snippet
+@startuml
+participant User
+participant System
+participant Database
+
+User -> System: Login
+System -> Database: Check Credentials
+loop Authentication successful
+    Database --> System: Valid user
+    System -> User: Welcome
+else Authentication failed
+    Database --> System: Invalid user
+    System -> User: Access Denied
+end
+@enduml
